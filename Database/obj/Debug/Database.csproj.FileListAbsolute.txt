@@ -1,0 +1,10 @@
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\bin\Debug\Database.dll.config
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\bin\Debug\Database.dll
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\bin\Debug\Database.pdb
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\bin\Debug\Newtonsoft.Json.dll
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\bin\Debug\Newtonsoft.Json.xml
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Database.csproj.CopyComplete
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Database.dll
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Database.pdb
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Database.csprojAssemblyReference.cache
