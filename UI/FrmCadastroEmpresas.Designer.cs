@@ -390,7 +390,6 @@
             this.txtCNPJReceitaFederal.Name = "txtCNPJReceitaFederal";
             this.txtCNPJReceitaFederal.Size = new System.Drawing.Size(312, 20);
             this.txtCNPJReceitaFederal.TabIndex = 39;
-            this.txtCNPJReceitaFederal.Text = "27865757000102";
             // 
             // label16
             // 

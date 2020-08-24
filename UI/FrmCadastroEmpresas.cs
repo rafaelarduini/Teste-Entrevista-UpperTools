@@ -71,6 +71,8 @@ namespace CadastroEmpresas
 
                 MessageBox.Show(retorno.ToString());
 
+                AtualizarGrid();
+
             }
             else
             {
@@ -86,7 +88,7 @@ namespace CadastroEmpresas
             AtualizarGrid();
         }
 
-        //Atualiza dados do DataGridView e realiza buscas
+        //Atualiza dados do DataGridView e realiza buscas por nome ou CNPJ
         private void AtualizarGrid()
         {
             EmpresaNegocios empresaNegocios = new EmpresaNegocios();
@@ -109,7 +111,7 @@ namespace CadastroEmpresas
 
         }
 
-        //Exclui empresa do banco de dados
+        //Exclui empresa selecionada do banco de dados
         private void btbExcluir_Click(object sender, EventArgs e)
         {
             if (dqvPesquisa.SelectedRows.Count == 0)
@@ -133,8 +135,6 @@ namespace CadastroEmpresas
             string retorno = empresaNegocios.Excluir(empresaSelecionado);
 
             MessageBox.Show("Cliente excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            txtNomeCNPJPesquisa.Text = string.Empty;
 
             AtualizarGrid();
 
@@ -189,7 +189,7 @@ namespace CadastroEmpresas
             rbtNome.Checked = false;
         }
 
-        //Obtem dados da empresa através de um webservice
+        //Obtem dados da empresa através de um webservice e preenche o formulário
         public async void GetEmpresaPorCNPJ(string cnpjEmpresa)
         {
             using (var client = new HttpClient())

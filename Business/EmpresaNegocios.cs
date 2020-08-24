@@ -1,11 +1,6 @@
 ﻿using Database;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Business
 {
@@ -53,7 +48,7 @@ namespace Business
             }
             catch (Exception exception)
             {
-                return ("Erro ao cadastrar empresa: " + exception.Message);
+                return ("Erro ao cadastrar empresa. Detalhes: " + exception.Message);
             }
         }
 
@@ -115,7 +110,7 @@ namespace Business
                     empresa.DataSituacaoEspecial = Convert.ToString(linha["DataSituacaoEspecial"]);
                     empresa.CapitalSocial = Convert.ToDecimal(linha["CapitalSocial"]);
                     empresa.UltimaAtualizacao = Convert.ToString(linha["UltimaAtualizacao"]);
-                    empresa.Qsa = Convert.ToString(linha["SituacaoEspecial"]);
+                    empresa.Qsa = Convert.ToString(linha["Qsa"]);
 
                     empresaColecao.Add(empresa);
                 }
