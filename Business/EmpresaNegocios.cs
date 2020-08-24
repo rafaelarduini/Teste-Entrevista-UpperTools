@@ -24,10 +24,13 @@ namespace Business
                 acessoDadosSqlServer.AdicionarParametros("@DataSituacao", empresa.DataSituacao);
                 acessoDadosSqlServer.AdicionarParametros("@Tipo", empresa.Tipo);
                 acessoDadosSqlServer.AdicionarParametros("@Situacao", empresa.Situacao);
+                acessoDadosSqlServer.AdicionarParametros("@Logradouro", empresa.Logradouro);
                 acessoDadosSqlServer.AdicionarParametros("@Numero", empresa.Numero);
+                acessoDadosSqlServer.AdicionarParametros("@Bairro", empresa.Bairro);
                 acessoDadosSqlServer.AdicionarParametros("@CEP", empresa.Cep);
                 acessoDadosSqlServer.AdicionarParametros("@Municipio", empresa.Municipio);
                 acessoDadosSqlServer.AdicionarParametros("@UF", empresa.Uf);
+                acessoDadosSqlServer.AdicionarParametros("@Telefone", empresa.Telefone);
                 acessoDadosSqlServer.AdicionarParametros("@AtividadesSecundarias", empresa.AtividadesSecundarias);
                 acessoDadosSqlServer.AdicionarParametros("@Porte", empresa.Porte);
                 acessoDadosSqlServer.AdicionarParametros("@DataAbertura", empresa.Abertura);
@@ -39,12 +42,13 @@ namespace Business
                 acessoDadosSqlServer.AdicionarParametros("@Efr", empresa.Efr);
                 acessoDadosSqlServer.AdicionarParametros("@MotivoSituacao", empresa.MotivoSituacao);
                 acessoDadosSqlServer.AdicionarParametros("@SituacaoEspecial", empresa.SituacaoEspecial);
+                acessoDadosSqlServer.AdicionarParametros("@DataSituacaoEspecial", empresa.DataSituacaoEspecial);
                 acessoDadosSqlServer.AdicionarParametros("@CapitalSocial", empresa.CapitalSocial);
                 acessoDadosSqlServer.AdicionarParametros("@UltimaAtualizacao", empresa.UltimaAtualizacao);
                 acessoDadosSqlServer.AdicionarParametros("@Qsa", empresa.Qsa);
-                string idEmpresa = acessoDadosSqlServer.ExecutarManipulcao(CommandType.StoredProcedure, "uspEmpresaAdicionar").ToString();
+                string nome = acessoDadosSqlServer.ExecutarManipulcao(CommandType.StoredProcedure, "uspEmpresaAdicionar").ToString();
 
-                return idEmpresa;
+                return nome;
 
             }
             catch (Exception exception)
@@ -58,10 +62,10 @@ namespace Business
             try
             {
                 acessoDadosSqlServer.LimparParametros();
-                acessoDadosSqlServer.AdicionarParametros("@IdEmpresa", empresa.IdEmpresa);
-                string idEmpresa = acessoDadosSqlServer.ExecutarManipulcao(CommandType.StoredProcedure, "uspEmpresaExcluir").ToString();
+                acessoDadosSqlServer.AdicionarParametros("@CNPJ", empresa.Cnpj);
+                string cnpj = acessoDadosSqlServer.ExecutarManipulcao(CommandType.StoredProcedure, "uspEmpresaExcluir").ToString();
 
-                return idEmpresa;
+                return cnpj;
 
             }
             catch (Exception exception)
@@ -83,7 +87,6 @@ namespace Business
                 foreach (DataRow linha in dataTableEmpresa.Rows)
                 {
                     Empresa empresa = new Empresa();
-                    empresa.IdEmpresa = Convert.ToInt32(linha["IdEmpresa"]);
                     empresa.Cnpj = Convert.ToString(linha["CNPJ"]);
                     empresa.Nome = Convert.ToString(linha["Nome"]);
                     empresa.AtividadePrincipal = Convert.ToString(linha["AtividadePrincipal"]);
@@ -138,10 +141,9 @@ namespace Business
                 foreach (DataRow linha in dataTableEmpresa.Rows)
                 {
                     Empresa empresa = new Empresa();
-                    empresa.IdEmpresa = Convert.ToInt32(linha["IdEmpresa"]);
                     empresa.Cnpj = Convert.ToString(linha["CNPJ"]);
                     empresa.Nome = Convert.ToString(linha["Nome"]);
-                    //empresa.AtividadePrincipal = Convert.ToString(linha["AtividadePrincipal"]);
+                    empresa.AtividadePrincipal = Convert.ToString(linha["AtividadePrincipal"]);
                     empresa.DataSituacao = Convert.ToString(linha["DataSituacao"]);
                     empresa.Tipo = Convert.ToString(linha["Tipo"]);
                     empresa.Situacao = Convert.ToString(linha["Situacao"]);
@@ -152,7 +154,7 @@ namespace Business
                     empresa.Municipio = Convert.ToString(linha["Municipio"]);
                     empresa.Uf = Convert.ToString(linha["UF"]);
                     empresa.Telefone = Convert.ToString(linha["Telefone"]);
-                    //empresa.AtividadesSecundarias = Convert.ToString(linha["CNPJ"]);
+                    empresa.AtividadesSecundarias = Convert.ToString(linha["CNPJ"]);
                     empresa.Porte = Convert.ToString(linha["Porte"]);
                     empresa.Abertura = Convert.ToString(linha["DataAbertura"]);
                     empresa.NaturezaJuridica = Convert.ToString(linha["NaturezaJuridica"]);
@@ -166,7 +168,7 @@ namespace Business
                     empresa.DataSituacaoEspecial = Convert.ToString(linha["DataSituacaoEspecial"]);
                     empresa.CapitalSocial = Convert.ToDecimal(linha["CapitalSocial"]);
                     empresa.UltimaAtualizacao = Convert.ToString(linha["UltimaAtualizacao"]);
-                    //empresa.Qsa = Convert.ToString(linha["SituacaoEspecial"]);
+                    empresa.Qsa = Convert.ToString(linha["SituacaoEspecial"]);
 
                     empresaColecao.Add(empresa);
 

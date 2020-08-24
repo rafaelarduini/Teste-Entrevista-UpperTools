@@ -51,9 +51,6 @@ namespace Database
         [JsonProperty("fantasia")]
         public string Fantasia { get; set; }
 
-        [JsonProperty("cnpj")]
-        public string Cnpj { get; set; }
-
         [JsonProperty("ultima_atualizacao")]
         public string UltimaAtualizacao { get; set; }
 

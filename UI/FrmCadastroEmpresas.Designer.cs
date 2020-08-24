@@ -95,6 +95,7 @@
             this.pnlBancoDados = new System.Windows.Forms.Panel();
             this.dqvPesquisa = new System.Windows.Forms.DataGridView();
             this.btnBancoDados = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.pnlBancoDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dqvPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +112,7 @@
             // 
             // btbBuscar
             // 
-            this.btbBuscar.Location = new System.Drawing.Point(13, 49);
+            this.btbBuscar.Location = new System.Drawing.Point(442, 20);
             this.btbBuscar.Name = "btbBuscar";
             this.btbBuscar.Size = new System.Drawing.Size(77, 22);
             this.btbBuscar.TabIndex = 1;
@@ -121,7 +122,7 @@
             // 
             // btbExcluir
             // 
-            this.btbExcluir.Location = new System.Drawing.Point(96, 50);
+            this.btbExcluir.Location = new System.Drawing.Point(525, 21);
             this.btbExcluir.Name = "btbExcluir";
             this.btbExcluir.Size = new System.Drawing.Size(77, 21);
             this.btbExcluir.TabIndex = 2;
@@ -134,6 +135,7 @@
             this.txtAtividadePrincipal.Location = new System.Drawing.Point(136, 104);
             this.txtAtividadePrincipal.Multiline = true;
             this.txtAtividadePrincipal.Name = "txtAtividadePrincipal";
+            this.txtAtividadePrincipal.ReadOnly = true;
             this.txtAtividadePrincipal.Size = new System.Drawing.Size(312, 20);
             this.txtAtividadePrincipal.TabIndex = 3;
             // 
@@ -159,6 +161,7 @@
             // 
             this.txtDataSituacao.Location = new System.Drawing.Point(136, 130);
             this.txtDataSituacao.Name = "txtDataSituacao";
+            this.txtDataSituacao.ReadOnly = true;
             this.txtDataSituacao.Size = new System.Drawing.Size(312, 20);
             this.txtDataSituacao.TabIndex = 5;
             // 
@@ -175,6 +178,7 @@
             // 
             this.txtTipo.Location = new System.Drawing.Point(136, 156);
             this.txtTipo.Name = "txtTipo";
+            this.txtTipo.ReadOnly = true;
             this.txtTipo.Size = new System.Drawing.Size(312, 20);
             this.txtTipo.TabIndex = 7;
             // 
@@ -191,6 +195,7 @@
             // 
             this.txtNome.Location = new System.Drawing.Point(136, 78);
             this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
             this.txtNome.Size = new System.Drawing.Size(312, 20);
             this.txtNome.TabIndex = 9;
             // 
@@ -207,6 +212,7 @@
             // 
             this.txtUF.Location = new System.Drawing.Point(136, 341);
             this.txtUF.Name = "txtUF";
+            this.txtUF.ReadOnly = true;
             this.txtUF.Size = new System.Drawing.Size(312, 20);
             this.txtUF.TabIndex = 11;
             // 
@@ -223,6 +229,7 @@
             // 
             this.txtTelefone.Location = new System.Drawing.Point(136, 367);
             this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.ReadOnly = true;
             this.txtTelefone.Size = new System.Drawing.Size(312, 20);
             this.txtTelefone.TabIndex = 13;
             // 
@@ -240,6 +247,7 @@
             this.txtAtividadesSecundarias.Location = new System.Drawing.Point(136, 393);
             this.txtAtividadesSecundarias.Multiline = true;
             this.txtAtividadesSecundarias.Name = "txtAtividadesSecundarias";
+            this.txtAtividadesSecundarias.ReadOnly = true;
             this.txtAtividadesSecundarias.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAtividadesSecundarias.Size = new System.Drawing.Size(312, 149);
             this.txtAtividadesSecundarias.TabIndex = 15;
@@ -258,6 +266,7 @@
             this.txtQsa.Location = new System.Drawing.Point(591, 387);
             this.txtQsa.Multiline = true;
             this.txtQsa.Name = "txtQsa";
+            this.txtQsa.ReadOnly = true;
             this.txtQsa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtQsa.Size = new System.Drawing.Size(312, 155);
             this.txtQsa.TabIndex = 17;
@@ -275,6 +284,7 @@
             // 
             this.txtSituacao.Location = new System.Drawing.Point(136, 185);
             this.txtSituacao.Name = "txtSituacao";
+            this.txtSituacao.ReadOnly = true;
             this.txtSituacao.Size = new System.Drawing.Size(312, 20);
             this.txtSituacao.TabIndex = 19;
             // 
@@ -291,6 +301,7 @@
             // 
             this.txtBairro.Location = new System.Drawing.Point(136, 211);
             this.txtBairro.Name = "txtBairro";
+            this.txtBairro.ReadOnly = true;
             this.txtBairro.Size = new System.Drawing.Size(312, 20);
             this.txtBairro.TabIndex = 21;
             // 
@@ -307,6 +318,7 @@
             // 
             this.txtLogradouro.Location = new System.Drawing.Point(136, 237);
             this.txtLogradouro.Name = "txtLogradouro";
+            this.txtLogradouro.ReadOnly = true;
             this.txtLogradouro.Size = new System.Drawing.Size(312, 20);
             this.txtLogradouro.TabIndex = 23;
             // 
@@ -323,6 +335,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(591, 205);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(312, 20);
             this.txtEmail.TabIndex = 45;
             // 
@@ -339,6 +352,7 @@
             // 
             this.txtComplemento.Location = new System.Drawing.Point(591, 179);
             this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.ReadOnly = true;
             this.txtComplemento.Size = new System.Drawing.Size(312, 20);
             this.txtComplemento.TabIndex = 43;
             // 
@@ -355,6 +369,7 @@
             // 
             this.txtStatus.Location = new System.Drawing.Point(591, 153);
             this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
             this.txtStatus.Size = new System.Drawing.Size(312, 20);
             this.txtStatus.TabIndex = 41;
             // 
@@ -388,6 +403,7 @@
             // 
             this.txtNomeFantasia.Location = new System.Drawing.Point(591, 126);
             this.txtNomeFantasia.Name = "txtNomeFantasia";
+            this.txtNomeFantasia.ReadOnly = true;
             this.txtNomeFantasia.Size = new System.Drawing.Size(312, 20);
             this.txtNomeFantasia.TabIndex = 37;
             // 
@@ -404,6 +420,7 @@
             // 
             this.txtNaturezaJuridica.Location = new System.Drawing.Point(591, 100);
             this.txtNaturezaJuridica.Name = "txtNaturezaJuridica";
+            this.txtNaturezaJuridica.ReadOnly = true;
             this.txtNaturezaJuridica.Size = new System.Drawing.Size(312, 20);
             this.txtNaturezaJuridica.TabIndex = 35;
             // 
@@ -420,6 +437,7 @@
             // 
             this.txtDataAbertura.Location = new System.Drawing.Point(591, 74);
             this.txtDataAbertura.Name = "txtDataAbertura";
+            this.txtDataAbertura.ReadOnly = true;
             this.txtDataAbertura.Size = new System.Drawing.Size(312, 20);
             this.txtDataAbertura.TabIndex = 33;
             // 
@@ -436,6 +454,7 @@
             // 
             this.txtPorte.Location = new System.Drawing.Point(591, 48);
             this.txtPorte.Name = "txtPorte";
+            this.txtPorte.ReadOnly = true;
             this.txtPorte.Size = new System.Drawing.Size(312, 20);
             this.txtPorte.TabIndex = 31;
             // 
@@ -452,6 +471,7 @@
             // 
             this.txtMunicipio.Location = new System.Drawing.Point(136, 315);
             this.txtMunicipio.Name = "txtMunicipio";
+            this.txtMunicipio.ReadOnly = true;
             this.txtMunicipio.Size = new System.Drawing.Size(312, 20);
             this.txtMunicipio.TabIndex = 29;
             // 
@@ -468,6 +488,7 @@
             // 
             this.txtCEP.Location = new System.Drawing.Point(136, 289);
             this.txtCEP.Name = "txtCEP";
+            this.txtCEP.ReadOnly = true;
             this.txtCEP.Size = new System.Drawing.Size(312, 20);
             this.txtCEP.TabIndex = 27;
             // 
@@ -484,6 +505,7 @@
             // 
             this.txtNumero.Location = new System.Drawing.Point(136, 263);
             this.txtNumero.Name = "txtNumero";
+            this.txtNumero.ReadOnly = true;
             this.txtNumero.Size = new System.Drawing.Size(312, 20);
             this.txtNumero.TabIndex = 25;
             // 
@@ -500,8 +522,10 @@
             // 
             this.txtCapitalSocial.Location = new System.Drawing.Point(591, 335);
             this.txtCapitalSocial.Name = "txtCapitalSocial";
+            this.txtCapitalSocial.ReadOnly = true;
             this.txtCapitalSocial.Size = new System.Drawing.Size(312, 20);
             this.txtCapitalSocial.TabIndex = 55;
+            this.txtCapitalSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCapitalSocial_KeyPress);
             // 
             // label30
             // 
@@ -516,6 +540,7 @@
             // 
             this.txtDataSitucaoEspecial.Location = new System.Drawing.Point(591, 309);
             this.txtDataSitucaoEspecial.Name = "txtDataSitucaoEspecial";
+            this.txtDataSitucaoEspecial.ReadOnly = true;
             this.txtDataSitucaoEspecial.Size = new System.Drawing.Size(312, 20);
             this.txtDataSitucaoEspecial.TabIndex = 53;
             // 
@@ -532,6 +557,7 @@
             // 
             this.txtSituacaoEspecial.Location = new System.Drawing.Point(591, 283);
             this.txtSituacaoEspecial.Name = "txtSituacaoEspecial";
+            this.txtSituacaoEspecial.ReadOnly = true;
             this.txtSituacaoEspecial.Size = new System.Drawing.Size(312, 20);
             this.txtSituacaoEspecial.TabIndex = 51;
             // 
@@ -548,6 +574,7 @@
             // 
             this.txtMotivoSituacao.Location = new System.Drawing.Point(591, 257);
             this.txtMotivoSituacao.Name = "txtMotivoSituacao";
+            this.txtMotivoSituacao.ReadOnly = true;
             this.txtMotivoSituacao.Size = new System.Drawing.Size(312, 20);
             this.txtMotivoSituacao.TabIndex = 49;
             // 
@@ -564,6 +591,7 @@
             // 
             this.txtEfr.Location = new System.Drawing.Point(591, 231);
             this.txtEfr.Name = "txtEfr";
+            this.txtEfr.ReadOnly = true;
             this.txtEfr.Size = new System.Drawing.Size(312, 20);
             this.txtEfr.TabIndex = 47;
             // 
@@ -590,6 +618,7 @@
             // 
             this.txtCNPJFormulario.Location = new System.Drawing.Point(136, 52);
             this.txtCNPJFormulario.Name = "txtCNPJFormulario";
+            this.txtCNPJFormulario.ReadOnly = true;
             this.txtCNPJFormulario.Size = new System.Drawing.Size(312, 20);
             this.txtCNPJFormulario.TabIndex = 62;
             // 
@@ -608,7 +637,6 @@
             this.txtNomeCNPJPesquisa.Name = "txtNomeCNPJPesquisa";
             this.txtNomeCNPJPesquisa.Size = new System.Drawing.Size(312, 20);
             this.txtNomeCNPJPesquisa.TabIndex = 64;
-            this.txtNomeCNPJPesquisa.Text = "27865757000102";
             // 
             // label25
             // 
@@ -623,28 +651,33 @@
             // 
             this.txtUltimaAtualizacao.Location = new System.Drawing.Point(591, 361);
             this.txtUltimaAtualizacao.Name = "txtUltimaAtualizacao";
+            this.txtUltimaAtualizacao.ReadOnly = true;
             this.txtUltimaAtualizacao.Size = new System.Drawing.Size(312, 20);
             this.txtUltimaAtualizacao.TabIndex = 66;
             // 
             // pnlBancoDados
             // 
+            this.pnlBancoDados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBancoDados.Controls.Add(this.btnSair);
             this.pnlBancoDados.Controls.Add(this.dqvPesquisa);
             this.pnlBancoDados.Controls.Add(this.btbBuscar);
             this.pnlBancoDados.Controls.Add(this.btbExcluir);
             this.pnlBancoDados.Controls.Add(this.label24);
             this.pnlBancoDados.Controls.Add(this.txtNomeCNPJPesquisa);
-            this.pnlBancoDados.Location = new System.Drawing.Point(26, 172);
+            this.pnlBancoDados.Location = new System.Drawing.Point(72, 107);
             this.pnlBancoDados.Name = "pnlBancoDados";
-            this.pnlBancoDados.Size = new System.Drawing.Size(909, 494);
+            this.pnlBancoDados.Size = new System.Drawing.Size(779, 411);
             this.pnlBancoDados.TabIndex = 68;
             this.pnlBancoDados.Visible = false;
+            this.pnlBancoDados.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBancoDados_MouseDown);
+            this.pnlBancoDados.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlBancoDados_MouseMove);
             // 
             // dqvPesquisa
             // 
             this.dqvPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dqvPesquisa.Location = new System.Drawing.Point(13, 77);
             this.dqvPesquisa.Name = "dqvPesquisa";
-            this.dqvPesquisa.Size = new System.Drawing.Size(884, 403);
+            this.dqvPesquisa.Size = new System.Drawing.Size(747, 313);
             this.dqvPesquisa.TabIndex = 0;
             // 
             // btnBancoDados
@@ -656,6 +689,16 @@
             this.btnBancoDados.Text = "Banco de Dados";
             this.btnBancoDados.UseVisualStyleBackColor = true;
             this.btnBancoDados.Click += new System.EventHandler(this.btnBancoDados_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(608, 21);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 21);
+            this.btnSair.TabIndex = 66;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // FrmCadastroEmpresas
             // 
@@ -803,6 +846,7 @@
         private System.Windows.Forms.Panel pnlBancoDados;
         private System.Windows.Forms.DataGridView dqvPesquisa;
         private System.Windows.Forms.Button btnBancoDados;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 

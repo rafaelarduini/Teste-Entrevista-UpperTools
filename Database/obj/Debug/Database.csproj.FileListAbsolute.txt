@@ -7,3 +7,4 @@ C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Dat
 C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Database.csproj.CopyComplete
 C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Database.dll
 C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Database.pdb
+C:\Users\T-Gamer\source\repos\Teste-Entrevista-UpperTools\Database\obj\Debug\Database.csprojAssemblyReference.cache

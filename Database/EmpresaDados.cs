@@ -9,6 +9,10 @@ namespace Database
 {
     public class EmpresaDados : Base
     {
+        [JsonProperty("cnpj")]
+        public string Cnpj { get; set; }
+
+
         [JsonProperty("atividade_principal")]
         public List<AtividadePrincipalLista> AtividadePrincipalLista { get; set; }
 

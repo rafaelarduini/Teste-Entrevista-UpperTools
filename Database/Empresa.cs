@@ -9,8 +9,7 @@ namespace Database
 {
     public class Empresa : Base
     {
-        public int IdEmpresa { get; set; }
-
+        public string Cnpj { get; set; }
         public string AtividadePrincipal { get; set; }
 
         public string AtividadesSecundarias { get; set; }
