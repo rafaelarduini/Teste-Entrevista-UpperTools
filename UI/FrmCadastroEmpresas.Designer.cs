@@ -88,14 +88,16 @@
             this.btbPreencher = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.txtCNPJFormulario = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.txtNomeCNPJPesquisa = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtUltimaAtualizacao = new System.Windows.Forms.TextBox();
             this.pnlBancoDados = new System.Windows.Forms.Panel();
-            this.dqvPesquisa = new System.Windows.Forms.DataGridView();
-            this.btnBancoDados = new System.Windows.Forms.Button();
+            this.rbtCNPJ = new System.Windows.Forms.RadioButton();
+            this.rbtNome = new System.Windows.Forms.RadioButton();
             this.btnSair = new System.Windows.Forms.Button();
+            this.dqvPesquisa = new System.Windows.Forms.DataGridView();
+            this.label24 = new System.Windows.Forms.Label();
+            this.btnBancoDados = new System.Windows.Forms.Button();
             this.pnlBancoDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dqvPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -112,7 +114,7 @@
             // 
             // btbBuscar
             // 
-            this.btbBuscar.Location = new System.Drawing.Point(442, 20);
+            this.btbBuscar.Location = new System.Drawing.Point(331, 18);
             this.btbBuscar.Name = "btbBuscar";
             this.btbBuscar.Size = new System.Drawing.Size(77, 22);
             this.btbBuscar.TabIndex = 1;
@@ -122,7 +124,7 @@
             // 
             // btbExcluir
             // 
-            this.btbExcluir.Location = new System.Drawing.Point(525, 21);
+            this.btbExcluir.Location = new System.Drawing.Point(414, 19);
             this.btbExcluir.Name = "btbExcluir";
             this.btbExcluir.Size = new System.Drawing.Size(77, 21);
             this.btbExcluir.TabIndex = 2;
@@ -525,7 +527,6 @@
             this.txtCapitalSocial.ReadOnly = true;
             this.txtCapitalSocial.Size = new System.Drawing.Size(312, 20);
             this.txtCapitalSocial.TabIndex = 55;
-            this.txtCapitalSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCapitalSocial_KeyPress);
             // 
             // label30
             // 
@@ -622,18 +623,9 @@
             this.txtCNPJFormulario.Size = new System.Drawing.Size(312, 20);
             this.txtCNPJFormulario.TabIndex = 62;
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(17, 23);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(73, 13);
-            this.label24.TabIndex = 65;
-            this.label24.Text = "Nome / CNPJ";
-            // 
             // txtNomeCNPJPesquisa
             // 
-            this.txtNomeCNPJPesquisa.Location = new System.Drawing.Point(96, 20);
+            this.txtNomeCNPJPesquisa.Location = new System.Drawing.Point(13, 19);
             this.txtNomeCNPJPesquisa.Name = "txtNomeCNPJPesquisa";
             this.txtNomeCNPJPesquisa.Size = new System.Drawing.Size(312, 20);
             this.txtNomeCNPJPesquisa.TabIndex = 64;
@@ -658,6 +650,8 @@
             // pnlBancoDados
             // 
             this.pnlBancoDados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBancoDados.Controls.Add(this.rbtCNPJ);
+            this.pnlBancoDados.Controls.Add(this.rbtNome);
             this.pnlBancoDados.Controls.Add(this.btnSair);
             this.pnlBancoDados.Controls.Add(this.dqvPesquisa);
             this.pnlBancoDados.Controls.Add(this.btbBuscar);
@@ -672,6 +666,40 @@
             this.pnlBancoDados.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBancoDados_MouseDown);
             this.pnlBancoDados.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlBancoDados_MouseMove);
             // 
+            // rbtCNPJ
+            // 
+            this.rbtCNPJ.AutoSize = true;
+            this.rbtCNPJ.Location = new System.Drawing.Point(139, 44);
+            this.rbtCNPJ.Name = "rbtCNPJ";
+            this.rbtCNPJ.Size = new System.Drawing.Size(52, 17);
+            this.rbtCNPJ.TabIndex = 68;
+            this.rbtCNPJ.Text = "CNPJ";
+            this.rbtCNPJ.UseVisualStyleBackColor = true;
+            this.rbtCNPJ.Click += new System.EventHandler(this.rbtCNPJ_Click);
+            // 
+            // rbtNome
+            // 
+            this.rbtNome.AutoSize = true;
+            this.rbtNome.Checked = true;
+            this.rbtNome.Location = new System.Drawing.Point(80, 44);
+            this.rbtNome.Name = "rbtNome";
+            this.rbtNome.Size = new System.Drawing.Size(53, 17);
+            this.rbtNome.TabIndex = 67;
+            this.rbtNome.TabStop = true;
+            this.rbtNome.Text = "Nome";
+            this.rbtNome.UseVisualStyleBackColor = true;
+            this.rbtNome.Click += new System.EventHandler(this.rbtNome_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(497, 19);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 21);
+            this.btnSair.TabIndex = 66;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // dqvPesquisa
             // 
             this.dqvPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -680,25 +708,24 @@
             this.dqvPesquisa.Size = new System.Drawing.Size(747, 313);
             this.dqvPesquisa.TabIndex = 0;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(13, 46);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(61, 13);
+            this.label24.TabIndex = 65;
+            this.label24.Text = "Buscar por:";
+            // 
             // btnBancoDados
             // 
-            this.btnBancoDados.Location = new System.Drawing.Point(795, 8);
+            this.btnBancoDados.Location = new System.Drawing.Point(738, 8);
             this.btnBancoDados.Name = "btnBancoDados";
-            this.btnBancoDados.Size = new System.Drawing.Size(108, 27);
+            this.btnBancoDados.Size = new System.Drawing.Size(165, 27);
             this.btnBancoDados.TabIndex = 69;
-            this.btnBancoDados.Text = "Banco de Dados";
+            this.btnBancoDados.Text = "Consultar Banco de Dados";
             this.btnBancoDados.UseVisualStyleBackColor = true;
             this.btnBancoDados.Click += new System.EventHandler(this.btnBancoDados_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.Location = new System.Drawing.Point(608, 21);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 21);
-            this.btnSair.TabIndex = 66;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // FrmCadastroEmpresas
             // 
@@ -839,7 +866,6 @@
         private System.Windows.Forms.Button btbPreencher;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtCNPJFormulario;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtNomeCNPJPesquisa;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtUltimaAtualizacao;
@@ -847,6 +873,9 @@
         private System.Windows.Forms.DataGridView dqvPesquisa;
         private System.Windows.Forms.Button btnBancoDados;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.RadioButton rbtCNPJ;
+        private System.Windows.Forms.RadioButton rbtNome;
+        private System.Windows.Forms.Label label24;
     }
 }
 

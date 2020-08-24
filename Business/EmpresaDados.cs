@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    public class Base
+    public class EmpresaDados
     {
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("cnpj")]
+        public string CNPJ { get; set; }
+
         [JsonProperty("data_situacao")]
         public string DataSituacao { get; set; }
 
@@ -16,7 +25,7 @@ namespace Database
         public string Nome { get; set; }
 
         [JsonProperty("uf")]
-        public string Uf { get; set; }
+        public string UF { get; set; }
 
         [JsonProperty("telefone")]
         public string Telefone { get; set; }
@@ -34,7 +43,7 @@ namespace Database
         public string Numero { get; set; }
 
         [JsonProperty("cep")]
-        public string Cep { get; set; }
+        public string CEP { get; set; }
 
         [JsonProperty("municipio")]
         public string Municipio { get; set; }
@@ -49,13 +58,10 @@ namespace Database
         public string NaturezaJuridica { get; set; }
 
         [JsonProperty("fantasia")]
-        public string Fantasia { get; set; }
+        public string NomeFantasia { get; set; }
 
         [JsonProperty("ultima_atualizacao")]
         public string UltimaAtualizacao { get; set; }
-
-        [JsonProperty("status")]
-        public string Status { get; set; }
 
         [JsonProperty("tipo")]
         public string Tipo { get; set; }
@@ -80,5 +86,42 @@ namespace Database
 
         [JsonProperty("capital_social")]
         public decimal CapitalSocial { get; set; }
+
+        [JsonProperty("atividade_principal")]
+        public List<AtividadePrincipalLista> AtividadePrincipalLista { get; set; }
+
+        [JsonProperty("atividades_secundarias")]
+        public List<AtividadesSecundariasLista> AtividadesSecundariasLista { get; set; }
+
+        [JsonProperty("qsa")]
+        public List<QsaLista> QsaLista { get; set; }
+
+    }
+
+    public abstract class Modelo
+    {
+        [JsonProperty("text")]
+        public string Text { get; set; }
+
+        [JsonProperty("code")]
+        public string Code { get; set; }
+    }
+
+
+    public class AtividadesSecundariasLista : Modelo
+    {
+
+    }
+    public class AtividadePrincipalLista : Modelo
+    {
+
+    }
+    public class QsaLista
+    {
+        [JsonProperty("qual")]
+        public string Qual { get; set; }
+
+        [JsonProperty("nome")]
+        public string Nome { get; set; }
     }
 }

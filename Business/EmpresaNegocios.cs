@@ -18,7 +18,7 @@ namespace Business
             try
             {
                 acessoDadosSqlServer.LimparParametros();
-                acessoDadosSqlServer.AdicionarParametros("@CNPJ", empresa.Cnpj);
+                acessoDadosSqlServer.AdicionarParametros("@CNPJ", empresa.CNPJ);
                 acessoDadosSqlServer.AdicionarParametros("@Nome", empresa.Nome);
                 acessoDadosSqlServer.AdicionarParametros("@AtividadePrincipal", empresa.AtividadePrincipal);
                 acessoDadosSqlServer.AdicionarParametros("@DataSituacao", empresa.DataSituacao);
@@ -27,16 +27,15 @@ namespace Business
                 acessoDadosSqlServer.AdicionarParametros("@Logradouro", empresa.Logradouro);
                 acessoDadosSqlServer.AdicionarParametros("@Numero", empresa.Numero);
                 acessoDadosSqlServer.AdicionarParametros("@Bairro", empresa.Bairro);
-                acessoDadosSqlServer.AdicionarParametros("@CEP", empresa.Cep);
+                acessoDadosSqlServer.AdicionarParametros("@CEP", empresa.CEP);
                 acessoDadosSqlServer.AdicionarParametros("@Municipio", empresa.Municipio);
-                acessoDadosSqlServer.AdicionarParametros("@UF", empresa.Uf);
+                acessoDadosSqlServer.AdicionarParametros("@UF", empresa.UF);
                 acessoDadosSqlServer.AdicionarParametros("@Telefone", empresa.Telefone);
                 acessoDadosSqlServer.AdicionarParametros("@AtividadesSecundarias", empresa.AtividadesSecundarias);
                 acessoDadosSqlServer.AdicionarParametros("@Porte", empresa.Porte);
                 acessoDadosSqlServer.AdicionarParametros("@DataAbertura", empresa.Abertura);
                 acessoDadosSqlServer.AdicionarParametros("@NaturezaJuridica", empresa.NaturezaJuridica);
-                acessoDadosSqlServer.AdicionarParametros("@NomeFantasia", empresa.Fantasia);
-                acessoDadosSqlServer.AdicionarParametros("@StatusEmpresa", empresa.Status);
+                acessoDadosSqlServer.AdicionarParametros("@NomeFantasia", empresa.NomeFantasia);
                 acessoDadosSqlServer.AdicionarParametros("@Complemento", empresa.Complemento);
                 acessoDadosSqlServer.AdicionarParametros("@Email", empresa.Email);
                 acessoDadosSqlServer.AdicionarParametros("@Efr", empresa.Efr);
@@ -48,12 +47,12 @@ namespace Business
                 acessoDadosSqlServer.AdicionarParametros("@Qsa", empresa.Qsa);
                 string nome = acessoDadosSqlServer.ExecutarManipulcao(CommandType.StoredProcedure, "uspEmpresaAdicionar").ToString();
 
-                return nome;
+                return ("Empresa cadastrada com sucesso: " + nome);
 
             }
             catch (Exception exception)
             {
-                return exception.Message;
+                return ("Erro ao cadastrar empresa: " + exception.Message);
             }
         }
 
@@ -62,7 +61,7 @@ namespace Business
             try
             {
                 acessoDadosSqlServer.LimparParametros();
-                acessoDadosSqlServer.AdicionarParametros("@CNPJ", empresa.Cnpj);
+                acessoDadosSqlServer.AdicionarParametros("@CNPJ", empresa.CNPJ);
                 string cnpj = acessoDadosSqlServer.ExecutarManipulcao(CommandType.StoredProcedure, "uspEmpresaExcluir").ToString();
 
                 return cnpj;
@@ -87,7 +86,7 @@ namespace Business
                 foreach (DataRow linha in dataTableEmpresa.Rows)
                 {
                     Empresa empresa = new Empresa();
-                    empresa.Cnpj = Convert.ToString(linha["CNPJ"]);
+                    empresa.CNPJ = Convert.ToString(linha["CNPJ"]);
                     empresa.Nome = Convert.ToString(linha["Nome"]);
                     empresa.AtividadePrincipal = Convert.ToString(linha["AtividadePrincipal"]);
                     empresa.DataSituacao = Convert.ToString(linha["DataSituacao"]);
@@ -96,16 +95,15 @@ namespace Business
                     empresa.Logradouro = Convert.ToString(linha["Logradouro"]);
                     empresa.Numero = Convert.ToString(linha["Numero"]);
                     empresa.Bairro = Convert.ToString(linha["Bairro"]);
-                    empresa.Cep = Convert.ToString(linha["CEP"]);
+                    empresa.CEP = Convert.ToString(linha["CEP"]);
                     empresa.Municipio = Convert.ToString(linha["Municipio"]);
-                    empresa.Uf = Convert.ToString(linha["UF"]);
+                    empresa.UF = Convert.ToString(linha["UF"]);
                     empresa.Telefone = Convert.ToString(linha["Telefone"]);
                     empresa.AtividadesSecundarias = Convert.ToString(linha["CNPJ"]);
                     empresa.Porte = Convert.ToString(linha["Porte"]);
                     empresa.Abertura = Convert.ToString(linha["DataAbertura"]);
                     empresa.NaturezaJuridica = Convert.ToString(linha["NaturezaJuridica"]);
-                    empresa.Fantasia = Convert.ToString(linha["NomeFantasia"]);
-                    empresa.Status = Convert.ToString(linha["StatusEmpresa"]);
+                    empresa.NomeFantasia = Convert.ToString(linha["NomeFantasia"]);
                     empresa.Complemento = Convert.ToString(linha["Complemento"]);
                     empresa.Email = Convert.ToString(linha["Email"]);
                     empresa.Efr = Convert.ToString(linha["Efr"]);
@@ -141,7 +139,7 @@ namespace Business
                 foreach (DataRow linha in dataTableEmpresa.Rows)
                 {
                     Empresa empresa = new Empresa();
-                    empresa.Cnpj = Convert.ToString(linha["CNPJ"]);
+                    empresa.CNPJ = Convert.ToString(linha["CNPJ"]);
                     empresa.Nome = Convert.ToString(linha["Nome"]);
                     empresa.AtividadePrincipal = Convert.ToString(linha["AtividadePrincipal"]);
                     empresa.DataSituacao = Convert.ToString(linha["DataSituacao"]);
@@ -150,16 +148,15 @@ namespace Business
                     empresa.Logradouro = Convert.ToString(linha["Logradouro"]);
                     empresa.Numero = Convert.ToString(linha["Numero"]);
                     empresa.Bairro = Convert.ToString(linha["Bairro"]);
-                    empresa.Cep = Convert.ToString(linha["CEP"]);
+                    empresa.CEP = Convert.ToString(linha["CEP"]);
                     empresa.Municipio = Convert.ToString(linha["Municipio"]);
-                    empresa.Uf = Convert.ToString(linha["UF"]);
+                    empresa.UF = Convert.ToString(linha["UF"]);
                     empresa.Telefone = Convert.ToString(linha["Telefone"]);
                     empresa.AtividadesSecundarias = Convert.ToString(linha["CNPJ"]);
                     empresa.Porte = Convert.ToString(linha["Porte"]);
                     empresa.Abertura = Convert.ToString(linha["DataAbertura"]);
                     empresa.NaturezaJuridica = Convert.ToString(linha["NaturezaJuridica"]);
-                    empresa.Fantasia = Convert.ToString(linha["NomeFantasia"]);
-                    empresa.Status = Convert.ToString(linha["StatusEmpresa"]);
+                    empresa.NomeFantasia = Convert.ToString(linha["NomeFantasia"]);
                     empresa.Complemento = Convert.ToString(linha["Complemento"]);
                     empresa.Email = Convert.ToString(linha["Email"]);
                     empresa.Efr = Convert.ToString(linha["Efr"]);
