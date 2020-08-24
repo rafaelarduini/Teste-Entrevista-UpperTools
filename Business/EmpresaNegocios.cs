@@ -13,6 +13,7 @@ namespace Business
     {
         AcessoDadosSqlServer acessoDadosSqlServer = new AcessoDadosSqlServer();
 
+        //Adiciona empresa no banco de dados.
         public string Adicionar(Empresa empresa)
         {
             try
@@ -56,6 +57,7 @@ namespace Business
             }
         }
 
+        //Exclui empresa do banco de dados
         public string Excluir(Empresa empresa)
         {
             try
@@ -73,6 +75,7 @@ namespace Business
             }
         }
 
+        //Realiza busca por nome no banco de dados
         public EmpresaColecao BuscarPorNome(string nome)
         {
             try
@@ -99,7 +102,7 @@ namespace Business
                     empresa.Municipio = Convert.ToString(linha["Municipio"]);
                     empresa.UF = Convert.ToString(linha["UF"]);
                     empresa.Telefone = Convert.ToString(linha["Telefone"]);
-                    empresa.AtividadesSecundarias = Convert.ToString(linha["CNPJ"]);
+                    empresa.AtividadesSecundarias = Convert.ToString(linha["AtividadesSecundarias"]);
                     empresa.Porte = Convert.ToString(linha["Porte"]);
                     empresa.Abertura = Convert.ToString(linha["DataAbertura"]);
                     empresa.NaturezaJuridica = Convert.ToString(linha["NaturezaJuridica"]);
@@ -122,10 +125,11 @@ namespace Business
             }
             catch (Exception exception)
             {
-                throw new Exception("Não foi possível buscar a empresa por nome. Detalher: " + exception.Message);
+                throw new Exception("Não foi possível buscar a empresa por nome. Detalhes: " + exception.Message);
             }
         }
 
+        //Realiza busca por CNPJ no banco de dados
         public EmpresaColecao BuscarPorCNPJ(string cnpj)
         {
             try
@@ -165,7 +169,7 @@ namespace Business
                     empresa.DataSituacaoEspecial = Convert.ToString(linha["DataSituacaoEspecial"]);
                     empresa.CapitalSocial = Convert.ToDecimal(linha["CapitalSocial"]);
                     empresa.UltimaAtualizacao = Convert.ToString(linha["UltimaAtualizacao"]);
-                    empresa.Qsa = Convert.ToString(linha["SituacaoEspecial"]);
+                    empresa.Qsa = Convert.ToString(linha["Qsa"]);
 
                     empresaColecao.Add(empresa);
 

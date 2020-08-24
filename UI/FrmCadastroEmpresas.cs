@@ -62,8 +62,8 @@ namespace CadastroEmpresas
                 empresa.SituacaoEspecial = txtSituacaoEspecial.Text;
                 empresa.DataSituacaoEspecial = txtDataSitucaoEspecial.Text;
                 empresa.CapitalSocial = Convert.ToDecimal(txtCapitalSocial.Text);
-                empresa.UltimaAtualizacao = txtCNPJFormulario.Text;
-                empresa.Qsa = txtCNPJFormulario.Text;
+                empresa.UltimaAtualizacao = txtUltimaAtualizacao.Text;
+                empresa.Qsa = txtQsa.Text;
 
                 EmpresaNegocios empresaNegocios = new EmpresaNegocios();
 
@@ -118,7 +118,7 @@ namespace CadastroEmpresas
                 return;
             }
 
-            DialogResult resultado = MessageBox.Show("Tem cereteza que deseja excluir as empresas selecionadas?", "Pergunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("Tem cereteza que deseja excluir a empresa selecionada ?", "Pergunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.No)
             {
