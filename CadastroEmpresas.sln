@@ -9,6 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Databa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{92FAB202-AF96-410D-AE8D-9DB287391AC5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{9CD2A4E2-8854-494A-9F0F-1DAACDF04ACC}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\tblEmpresas.sql = ..\..\..\Desktop\tblEmpresas.sql
+		..\..\..\Desktop\uspEmpresaAdicionar.sql = ..\..\..\Desktop\uspEmpresaAdicionar.sql
+		..\..\..\Desktop\uspEmpresaBuscarPorCNPJ.sql = ..\..\..\Desktop\uspEmpresaBuscarPorCNPJ.sql
+		..\..\..\Desktop\uspEmpresaBuscarPorNome.sql = ..\..\..\Desktop\uspEmpresaBuscarPorNome.sql
+		..\..\..\Desktop\uspEmpresaExcluir.sql = ..\..\..\Desktop\uspEmpresaExcluir.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
